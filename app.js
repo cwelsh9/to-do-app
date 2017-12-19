@@ -32,6 +32,13 @@ function onReady() {
     //empty the input
     newToDoText.value = '';
   });
+
+  deleteToDo.addEventListener('click', event => {
+    event.preventDefault();
+
+    let elem = document.getElementById('toDoList');
+    elem.remove();
+  });
 }
 
 window.onload = function() {
