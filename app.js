@@ -1,16 +1,20 @@
 function onReady() {
+  let id = 0;
   let toDos = [];
+
   const addToDoForm = document.getElementById('addToDoForm');
   const newToDoText = document.getElementById('newToDoText');
   const toDoList = document.getElementById('toDoList');
+  const deleteToDo = document.getElementById('deleteToDo');
 
   function createNewToDo() {
-if (!newToDoText.value) { return; }
+    if (!newToDoText.value) { return; }
 
-    toDos.push({
-      title: newToDoText.value,
-      complete: false
-    });
+      toDos.push({
+        title: newToDoText.value,
+        complete: false,
+        id: id++
+      });
 
     newToDoText.value = '';
 
@@ -19,9 +23,16 @@ if (!newToDoText.value) { return; }
 
   function renderTheUI() {
     const toDoList = document.getElementById('toDoList');
-
     toDoList.textContent = '';
-// Use the for each method to loop through each to do item
+    newLi.deleteToDo.addEventListener('click', event => {
+      event.preventDefault();
+    });
+
+  function deleteToDo(id) {
+    toDos = toDos.filter()
+  }
+
+// Use the forEach method to loop through each to do item
 // Create new li element for the to-do
 // Create an input element that has a type of checkbox
 // Create a span element that's text content is the title of the to-do
