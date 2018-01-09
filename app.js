@@ -29,7 +29,9 @@ function onReady() {
     });
 
   function deleteToDo(id) {
-    toDos = toDos.filter()
+    let toDos = toDos.filter(item => item.id !== id);
+    deleteToDo(toDo.id);
+    renderTheUI();
   }
 
 // Use the forEach method to loop through each to do item
