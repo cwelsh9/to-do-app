@@ -35,8 +35,9 @@ if (!newToDoText.value) { return; }
       const title = document.createElement('span');
       title.textContent = toDo.title;
 
-      toDoList.appendChild(newLi);
-      newLi.appendChild(checkbox);
+      toDoList.appendChild(newToDo);
+      newToDo.appendChild(checkbox);
+      newToDo.appendChild(title);
     });
 
   }
