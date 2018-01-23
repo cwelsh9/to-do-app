@@ -5,7 +5,7 @@ function onReady() {
   const addToDoForm = document.getElementById('addToDoForm');
   const newToDoText = document.getElementById('newToDoText');
   const toDoList = document.getElementById('toDoList');
-  const deleteToDo = document.getElementById('deleteToDo');
+  const deleteToDoBtns = document.getElementByClass('deleteToDo');
 
   function createNewToDo() {
     if (!newToDoText.value) { return; }
@@ -24,7 +24,7 @@ function onReady() {
   function renderTheUI() {
     const toDoList = document.getElementById('toDoList');
     toDoList.textContent = '';
-    newLi.deleteToDo.addEventListener('click', event => {
+    deleteToDoBtns.addEventListener('click', event => {
       event.preventDefault();
     });
 
